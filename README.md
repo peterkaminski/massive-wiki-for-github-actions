@@ -1,6 +1,10 @@
-# Your Massive Wiki
+# Massive Wiki for GitHub Actions
 
-Version 2022-12-04-001.
+**STATUS: Developer preview, build works, deploy seems to work, but still need to document how to enable GitHub Pages for this repo.**
+
+This is a simple repo you can start with that will build a static website on GitHub Pages, using GitHub Actions.
+
+It is a copy of [Massive Wiki Starter](https://github.com/Massive-Wiki/massive-wiki-starter), with a `.github/actions.yml` file that does the build and deploy to GitHub Pages.
 
 ## What This Repo Is For
 
