@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Massive Wiki</title>
+    <link rel="stylesheet" href="/mwb-static/css/mystyles.css">
+    <link rel="stylesheet" href="/mwb-static/css/markdown.css">
+    <link rel="stylesheet" href="/mwb-static/css/sidebar.css">
+    
+    
+  </head>
+  <body class="has-navbar-fixed-top">
+    <nav class="navbar is-fixed-top is-info" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <div class="is-size-3 is-uppercase has-text-weight-light">Our Massive Wiki</div>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasic" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" href="/">
+            <strong>Home</strong>
+          </a>
+          <a class="button is-light" href="/all-pages.html">
+            All Pages
+          </a>
+          <a class="button is-light" href="/search.html">
+            Search
+          </a>
+
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    <section class="section">
+      <div class="container">
+	<div class="columns">
+	  <div class="sidebar column is-one-fifth">
+            <div class="content markdown-body" style="border-right:1px black solid; padding-right:1em;">
+              
+            </div>
+	  </div>
+	  <div class="column">
+            <div class="content markdown-body">
+              <h1>Your Massive Wiki</h1>
+<p>Version 2022-12-04-001.</p>
+<h2>What This Repo Is For</h2>
+<p>If you're seeing this on GitHub, click "Use this template" to make your own copy of this repo. Or, you can create a fork, or just clone this repo any other way.</p>
+<p>This repo is great to start with if you'll ever want to use Massive Wiki Builder to publish your wiki to the web. If you don't need that capability, you can usually just start a Massive Wiki with an empty directory and Git and your favorite Markdown editor.</p>
+<h2>For Editing Wiki Files</h2>
+<p>Welcome to the home page of this wiki. Edit to make it your own! You can delete all the sample content on this page, and replace it with yours.</p>
+<p>Use Markdown, or just type text -- either way works.</p>
+<p>Use double square brackets around words to make links to other pages in this wiki.</p>
+<h2>For Publishing Wiki To Website</h2>
+<h3>Massive Wiki Builder</h3>
+<p><strong>THIS FOLLOWING IS AN ADVANCED TOPIC.</strong> You do not need the following information if you just want to edit your wiki.</p>
+<p>You can use <a href="https://github.com/peterkaminski/massivewikibuilder">Massive Wiki Builder</a> to publish (export) any Massive Wiki to static HTML files. The wiki is then in a format viewable by anyone with a web browser.</p>
+<p>Massive Wiki Builder (MWB) and <a href="https://github.com/peterkaminski/massive-wiki-themes">Massive Wiki Themes</a> are included in this repo as Git submodules.</p>
+<p>If your website host has build automation, you can adapt the included <code>netlify.toml</code> file to drive the build automation, and the build automation should automatically use the Git submodule mechanism to retrieve the MWB code it will need.</p>
+<p>If you are using MWB locally on your computer, you will need to retrieve MWB, and optionally, the themes.</p>
+<p>When cloning this repo using Git, you can use the <code>--recurse-submodules</code> flag to also clone the Massive Wiki Builder and Massive Wiki Themes submodules.</p>
+<p>The full command:</p>
+<pre><code class="language-shell">git clone --recurse-submodules git@github.com:Massive-Wiki/massive-wiki-starter.git
+</code></pre>
+<p>Or, you can clone the submodules with these commands:</p>
+<pre><code class="language-shell">git submodule init
+git submodule update
+</code></pre>
+<p>See the <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Submodules chapter of the Git Book</a> for more information about Git submodules.</p>
+<h3>Themes</h3>
+<p>This starter wiki is set up with two MWB / MWT themes, Alto and Basso, in the <code>.massivewikibuilder/this-wiki-themes</code> folder. We suggest you continue to use and customize your wiki's themes in the <code>this-wiki-themes</code> folder.</p>
+<p>The Massive Wiki Themes repo is updated from time to time, and when you refresh your local Git submodule in <code>.massivewikibuilder/massive-wiki-themes</code>, you'll receive those updates. Rather than use those themes directly, though, it is suggested to copy what you want into your <code>this-wiki-themes</code> folder, and customize and use your copy of the themes from there.</p>
+            </div>
+	  </div>
+	</div>
+      </div>
+    </section>
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <div><strong>Our Massive Wiki</strong> by Our Wiki Team.</div>
+    <div>Central repository at <a href="https://github.com/your-organization/your-repo">GitHub/your-organization/your-repo</a>.</div>
+    <div>Licensed under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</div>
+    <div><em>Site last updated on Wednesday, January 25, 2023 at 20:21 UTC.</em></div>
+  </div>
+</footer>
+    <script>// ensure the DOM is loaded, for things that need it
+document.addEventListener('DOMContentLoaded', () => {
+
+  ////////////////////////////////////////////////////////////////
+  // Bulma navbar helpers
+  ////////////////////////////////////////////////////////////////
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});</script>
+<!-- uncomment to add Hypothes.is
+    <script src="https://hypothes.is/embed.js" async></script>
+-->
+  </body>
+</html>
