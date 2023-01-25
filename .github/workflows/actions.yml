@@ -29,6 +29,8 @@ jobs:
         run: |
              cd .massivewikibuilder/massivewikibuilder
              ./mwb.py -c ../mwb.yaml -w ../.. -o ../output -t ../this-wiki-themes/basso
+             pwd
+             ls ..
 
       - name: Deploy to GH Pages
         uses: JamesIves/github-pages-deploy-action@v4
