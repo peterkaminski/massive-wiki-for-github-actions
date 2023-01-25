@@ -21,6 +21,8 @@ jobs:
           
       - name: Build Static Pages
         run: |
+             pwd
+             ls
              cd .massivewikibuilder/massivewikibuilder
              ./mwb.py -c ../mwb.yaml -w ../.. -o ../output -t ../this-wiki-themes/basso
              
