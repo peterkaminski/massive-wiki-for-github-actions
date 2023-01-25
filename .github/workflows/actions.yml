@@ -13,19 +13,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
+        with:
+          submodules: recursive
+
       - name: Set up Python environment
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-          
+
       - name: Build Static Pages
         run: |
              pwd
              ls
              cd .massivewikibuilder/massivewikibuilder
              ./mwb.py -c ../mwb.yaml -w ../.. -o ../output -t ../this-wiki-themes/basso
-             
+
       - name: Deploy to GH Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
