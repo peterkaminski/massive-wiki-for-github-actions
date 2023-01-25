@@ -4,7 +4,7 @@
 
 This is a simple repo you can start with that will build a static website on GitHub Pages, using GitHub Actions.
 
-It is a copy of [Massive Wiki Starter](https://github.com/Massive-Wiki/massive-wiki-starter), with a `.github/actions.yml` file that does the build and deploy to GitHub Pages.
+It is a copy of [Massive Wiki Starter](https://github.com/Massive-Wiki/massive-wiki-starter), with a `.github/workflows/actions.yml` file that does the build and deploy to GitHub Pages.
 
 ## What This Repo Is For
 
