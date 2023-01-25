@@ -21,18 +21,16 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip' # caching pip dependencies
-      - run: pip install -r requirements.txt
+      - run: |
+             cd .massivewikibuilder/massivewikibuilder
+             pip install -r requirements.txt
 
       - name: Build Static Pages
-        run: |
-             pwd
-             ls
-             cd .massivewikibuilder/massivewikibuilder
-             ./mwb.py -c ../mwb.yaml -w ../.. -o ../output -t ../this-wiki-themes/basso
+        run: ./mwb.py -c ../mwb.yaml -w ../.. -o ../output -t ../this-wiki-themes/basso
 
       - name: Deploy to GH Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: static 
+          folder: output 
           clean: true
