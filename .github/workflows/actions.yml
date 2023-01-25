@@ -1,6 +1,9 @@
 name: Build a Massive Wiki with GitHub Actions 
 run-name: ${{ github.actor }} is building a Massive Wiki
 
+permissions:
+  contents: write # allow this action to write to GitHub Pages
+
 on:
   workflow_dispatch:
   push:
